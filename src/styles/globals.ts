@@ -9,6 +9,9 @@ export default createGlobalStyle`
 
 html,
 body {
+  height: 100%;
+  width: 100%;
+  background-color: black;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }

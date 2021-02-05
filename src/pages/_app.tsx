@@ -9,8 +9,8 @@ export default function MyApp({ Component, pageProps }: AppProps): JSX.Element {
       <Head>
         <title>React Three Fiber | JohnAnon Examples</title>
       </Head>
-      <GlobalStyle />
       <Component {...pageProps} />
+      <GlobalStyle />
     </>
   )
 }
