@@ -1,9 +1,12 @@
 import { useRef } from 'react'
-import { useFrame, MeshProps } from 'react-three-fiber'
+import { useFrame, MeshProps, BoxGeometryProps } from 'react-three-fiber'
 
 import { Mesh } from 'three'
 
-export default function Box(props: MeshProps): JSX.Element {
+export default function Box({
+  position,
+  args,
+}: MeshProps & BoxGeometryProps): JSX.Element {
   const refBox = useRef<Mesh>(null)
 
   useFrame(() => {
@@ -11,11 +14,9 @@ export default function Box(props: MeshProps): JSX.Element {
   })
 
   return (
-    <mesh {...props} ref={refBox} scale={[1, 1, 1]}>
-      <boxGeometry args={[2, 2, 2]} />
-      <meshPhongMaterial color="blue" />
-      <ambientLight />
-      <pointLight position={[10, 10, 10]} />
+    <mesh position={position} ref={refBox} scale={[1, 1, 1]}>
+      <boxGeometry attach="geometry" args={args} />
+      <meshPhongMaterial color="black" />
     </mesh>
   )
 }

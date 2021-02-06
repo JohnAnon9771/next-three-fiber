@@ -11,6 +11,7 @@
     "next": "10.0.6",
     "react": "17.0.1",
     "react-dom": "17.0.1",
+    "react-spring": "^8.0.27",
     "react-three-fiber": "^5.3.18",
     "styled-components": "^5.2.1",
     "three": "^0.125.2"
@@ -19,6 +20,6 @@
     "@types/node": "^14.14.25",
     "@types/react": "^17.0.1",
     "@types/styled-components": "^5.1.7",
-    "eslint-config-johnanon": "^1.1.46"
+    "eslint-config-johnanon": "^1.1.5"
   }
 }
