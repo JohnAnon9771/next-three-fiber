@@ -1,17 +1,33 @@
 import { Canvas } from 'react-three-fiber'
 
-import Box from 'components/Box'
-import Header from 'components/Header'
+import { Header, Box, Plane } from 'components'
 
 export default function Home(): JSX.Element {
   return (
     <>
       <Header />
-      <Canvas camera={{ position: [0, 0, 5], fov: 75 }}>
-        <Box position={[-5, 0, -5]} />
-        <Box position={[0, 0, -1]} args={[1, 1.5, 3]} />
-        <Box position={[5, 0, -5]} />
-        <directionalLight position={[0, 10, 0]} intensity={1} />
+      <Canvas
+        shadowMap
+        colorManagement
+        camera={{ position: [0, 0, 5], fov: 75 }}
+      >
+        <Box position={[-5, 0, -5]} color="lightpink" />
+        <Box position={[0, 0, -1]} args={[1, 1.5, 3]} color="lightblue" />
+        <Box position={[5, 0, -5]} color="lightpink" />
+        <directionalLight
+          position={[0, 10, 0]}
+          intensity={1}
+          castShadow
+          shadow-mapSize-height={1024}
+          shadow-mapSize-width={1024}
+          shadow-camera-far={50}
+          shadow-camera-left={-10}
+          shadow-camera-right={10}
+          shadow-camera-top={10}
+          shadow-camera-bottom={-10}
+        />
+
+        <Plane />
         <ambientLight intensity={0.3} />
         <pointLight position={[-10, 0, -5]} intensity={0.5} />
         <pointLight position={[0, 0, 5]} intensity={0.5} />

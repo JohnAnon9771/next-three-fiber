@@ -6,7 +6,8 @@ import { Mesh } from 'three'
 export default function Box({
   position,
   args,
-}: MeshProps & BoxGeometryProps): JSX.Element {
+  color,
+}: (MeshProps & BoxGeometryProps) & { color: string }): JSX.Element {
   const refBox = useRef<Mesh>(null)
 
   useFrame(() => {
@@ -14,9 +15,9 @@ export default function Box({
   })
 
   return (
-    <mesh position={position} ref={refBox} scale={[1, 1, 1]}>
+    <mesh castShadow position={position} ref={refBox} scale={[1, 1, 1]}>
       <boxGeometry attach="geometry" args={args} />
-      <meshPhongMaterial color="black" />
+      <meshPhongMaterial color={color} />
     </mesh>
   )
 }
