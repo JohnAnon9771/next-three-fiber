@@ -14,7 +14,6 @@ export default createGlobalStyle`
   #__next {
     height: 100%;
     width: 100%;
-    background-color: #eee;
     font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
       Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   }
