@@ -1,9 +1,9 @@
-import { useRef, useState } from 'react'
-import { useFrame, MeshProps, BoxGeometryProps } from 'react-three-fiber'
+import {useRef, useState} from 'react'
+import {useFrame, MeshProps, BoxGeometryProps} from 'react-three-fiber'
 
-import { useSpring, a } from '@react-spring/three'
-import { MeshWobbleMaterial } from '@react-three/drei'
-import { Mesh, Vector3 } from 'three'
+import {useSpring, a} from '@react-spring/three'
+import {MeshWobbleMaterial} from '@react-three/drei'
+import {Mesh, Vector3} from 'three'
 
 export default function Box({
   position,
@@ -20,7 +20,7 @@ export default function Box({
     refBox.current.rotation.x = refBox.current.rotation.y += 0.01
   })
 
-  const { scale } = useSpring<{ scale: Vector3 }>({
+  const {scale} = useSpring<{scale: Vector3}>({
     scale: expand ? [1.5, 1.5, 1.5] : [1, 1, 1],
   })
 

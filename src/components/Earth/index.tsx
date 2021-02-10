@@ -1,8 +1,8 @@
-import React, { useRef } from 'react'
+import React, {useRef} from 'react'
 
-import { useGLTF } from '@react-three/drei'
+import {useGLTF} from '@react-three/drei'
 import * as THREE from 'three'
-import { GLTF } from 'three/examples/jsm/loaders/GLTFLoader'
+import {GLTF} from 'three/examples/jsm/loaders/GLTFLoader'
 
 type GLTFResult = GLTF & {
   nodes: {
@@ -45,7 +45,7 @@ export default function Earth(
   props: JSX.IntrinsicElements['group']
 ): JSX.Element {
   const group = useRef<THREE.Group>()
-  const { nodes, materials } = useGLTF('/earth.glb') as GLTFResult
+  const {nodes, materials} = useGLTF('/earth.glb') as GLTFResult
 
   return (
     <group
