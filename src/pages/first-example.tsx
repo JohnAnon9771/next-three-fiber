@@ -8,7 +8,12 @@ softShadows()
 
 export default function FirstExample(): JSX.Element {
   return (
-    <Canvas shadowMap colorManagement camera={{position: [0, 0, 5], fov: 75}}>
+    <Canvas
+      shadowMap
+      colorManagement
+      style={{backgroundColor: '#eee'}}
+      camera={{position: [0, 0, 5], fov: 75}}
+    >
       <Box position={[-5, 0, -5]} color="lightpink" />
       <Box position={[0, 0, -1]} args={[1, 1.5, 3]} color="lightblue" />
       <Box position={[5, 0, -5]} color="lightpink" />
@@ -29,7 +34,6 @@ export default function FirstExample(): JSX.Element {
       <ambientLight intensity={0.3} />
       <pointLight position={[-10, 0, -5]} intensity={0.5} />
       <pointLight position={[0, 0, 5]} intensity={0.5} />
-      <pointLight position={[0, -10, 0]} intensity={1.5} />
       <OrbitControls />
     </Canvas>
   )
