@@ -17,9 +17,9 @@ export default function SecondExample(): JSX.Element {
   return (
     <Canvas camera={{position: [0, 15, 0], fov: 75}}>
       <Earth />
-      <Plane />
+      <Plane color="black" />
       <ambientLight intensity={0.3} />
-      <spotLight intensity={0.5} position={[0, 50, 0]} />
+      <directionalLight intensity={0.5} position={[0, 50, 0]} />
       <OrbitControls />
     </Canvas>
   )
