@@ -19,6 +19,9 @@ export default function Header({color}: Props): JSX.Element {
           <Link href="/second-example">
             <a>Second Example</a>
           </Link>
+          <Link href="/thirty-example">
+            <a>Thirty Example</a>
+          </Link>
         </S.Links>
       </div>
       <strong>0.1.0</strong>
