@@ -2,7 +2,7 @@ import dynamic from 'next/dynamic'
 
 import {Canvas} from 'react-three-fiber'
 
-import {OrbitControls} from '@react-three/drei'
+import {OrbitControls, Stars} from '@react-three/drei'
 
 import {Header} from 'components'
 
@@ -22,7 +22,7 @@ export default function SecondExample(): JSX.Element {
         camera={{position: [0, 15, 0], fov: 75}}
       >
         <Earth />
-
+        <Stars />
         <ambientLight intensity={0.3} />
         <directionalLight intensity={0.5} position={[0, 50, 0]} />
         <OrbitControls />
