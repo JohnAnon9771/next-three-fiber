@@ -1,4 +1,4 @@
-import React, {useRef} from 'react'
+import {useRef} from 'react'
 import {PrimitiveProps, useFrame, useLoader} from 'react-three-fiber'
 
 import {GLTFLoader} from 'three/examples/jsm/loaders/GLTFLoader'

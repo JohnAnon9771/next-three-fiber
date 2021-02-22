@@ -1,3 +1,4 @@
+import {Suspense} from 'react'
 import dynamic from 'next/dynamic'
 
 import {Canvas} from 'react-three-fiber'
@@ -21,7 +22,9 @@ export default function SecondExample(): JSX.Element {
         style={{backgroundColor: '#0E141B'}}
         camera={{position: [0, 15, 0], fov: 75}}
       >
-        <Earth />
+        <Suspense fallback={null}>
+          <Earth />
+        </Suspense>
         <Stars />
         <ambientLight intensity={0.3} />
         <directionalLight intensity={0.5} position={[0, 50, 0]} />
