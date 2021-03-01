@@ -9,7 +9,7 @@ export default function Plane({
 }: Props): JSX.Element {
   return (
     <mesh receiveShadow rotation={[-Math.PI / 2, 0, 0]} position={[0, -3, 0]}>
-      <planeGeometry args={args} />
+      <planeBufferGeometry args={args} />
       <meshStandardMaterial color={color} />
     </mesh>
   )
