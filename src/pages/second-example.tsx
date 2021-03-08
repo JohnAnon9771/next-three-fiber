@@ -19,6 +19,9 @@ export default function SecondExample(): JSX.Element {
     <>
       <Header color="#fff" />
       <Canvas
+        onCreated={({camera}) => {
+          camera.lookAt(5, -3, 0)
+        }}
         style={{backgroundColor: '#0E141B'}}
         camera={{position: [0, 15, 0], fov: 75}}
       >

@@ -7,9 +7,9 @@ export default function Earth(): JSX.Element {
   const primitiveRef = useRef<PrimitiveProps>()
   const gltf = useLoader(GLTFLoader, '/earth.glb')
 
-  useFrame(() => {
-    primitiveRef.current.rotation.y += 0.001
-  })
+  // useFrame(() => {
+  //   primitiveRef.current.rotation.y += 0.01
+  // })
 
   return (
     <primitive

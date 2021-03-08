@@ -1,5 +1,7 @@
 import Link from 'next/link'
 
+import {version} from '../../../package.json'
+
 import * as S from './styles'
 
 interface Props {
@@ -10,7 +12,9 @@ export default function Header({color}: Props): JSX.Element {
   return (
     <S.Header style={{color}}>
       <div className="start">
-        <h3>React Three Fiber</h3>
+        <h3>
+          React Three Fiber in <em>Next.js</em>
+        </h3>
         <p>JohnAnon9771</p>
         <S.Links>
           <Link href="/first-example">
@@ -24,7 +28,7 @@ export default function Header({color}: Props): JSX.Element {
           </Link>
         </S.Links>
       </div>
-      <strong>0.1.0</strong>
+      <strong>{version}</strong>
     </S.Header>
   )
 }
