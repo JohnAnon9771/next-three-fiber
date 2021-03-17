@@ -18,6 +18,29 @@ export default createGlobalStyle`
       Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   }
 
+  :root {
+    --bg-primary: #020101;
+    --brown: #5F1E04;
+    --light-gray: #5A5856;
+    --white: #F4F3F3;
+    --light-brown: #943003;
+    --light-gray: #AO9F9E; 
+
+
+  .hide-for-mobile {
+    @media (min-width: 649px) {
+      display: none !important;
+    }
+  }
+
+  .hide-for-desktop {
+    @media (min-width: 649px)  {
+      display: none !important;
+    }
+  }
+  
+  }
+
   a {
     color: inherit;
     text-decoration: none;

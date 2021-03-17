@@ -27,7 +27,7 @@
 
 // const withOffline = require('next-offline')
 const withTM = require('next-transpile-modules')(
-  ['three', '@react-three/drei'] // '@react-three/postprocessing'
+  ['three', '@react-three/drei', 'react-spring/three'] // '@react-three/postprocessing'
 )
 
 // // the config break if we use next export
