@@ -6,7 +6,7 @@ import {Box, Header, Plane} from 'components'
 
 softShadows()
 
-export default function FirstExample(): JSX.Element {
+export default function Boxes(): JSX.Element {
   return (
     <>
       <Header color="#000" />
@@ -19,6 +19,7 @@ export default function FirstExample(): JSX.Element {
         <Box position={[-5, 0, -5]} color="lightpink" />
         <Box position={[0, 0, -1]} args={[1, 1.5, 3]} color="lightblue" />
         <Box position={[5, 0, -5]} color="lightpink" />
+        <Plane />
         <directionalLight
           position={[0, 10, 0]}
           intensity={1}
@@ -32,7 +33,6 @@ export default function FirstExample(): JSX.Element {
           shadow-camera-bottom={-10}
         />
 
-        <Plane />
         <ambientLight intensity={0.3} />
         <pointLight position={[-10, 0, -5]} intensity={0.5} />
         <pointLight position={[0, 0, 5]} intensity={0.5} />

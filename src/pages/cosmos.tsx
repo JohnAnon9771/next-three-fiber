@@ -1,6 +1,6 @@
-import {Suspense} from 'react'
 import dynamic from 'next/dynamic'
 
+import {Suspense} from 'react'
 import {Canvas} from 'react-three-fiber'
 
 import {OrbitControls, Stars} from '@react-three/drei'
@@ -14,7 +14,7 @@ const Earth = dynamic(
   }
 )
 
-export default function SecondExample(): JSX.Element {
+export default function Cosmos(): JSX.Element {
   return (
     <>
       <Header color="#fff" />
