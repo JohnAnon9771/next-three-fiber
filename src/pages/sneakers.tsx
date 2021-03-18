@@ -1,7 +1,15 @@
+import dynamic from 'next/dynamic'
 import Link from 'next/link'
+
+import {Suspense} from 'react'
 import {Canvas} from 'react-three-fiber'
 
-import {Container} from 'styles/pages/thirty-example'
+import {Container} from 'styles/pages/sneakers'
+
+const AllStar = dynamic(
+  () => import('components').then(component => component.AllStar),
+  {ssr: false}
+)
 
 export default function ThirtyExample(): JSX.Element {
   return (
@@ -28,20 +36,26 @@ export default function ThirtyExample(): JSX.Element {
             <a href="#services">Studio</a>
           </div>
         </nav>
+
         <div className="header__section-menu hide-for-desktop">
-          <a href="#">Home</a>
+          <Link href="#">
+            <a>Work</a>
+          </Link>
           <hr />
-          <a href="#">About us</a>
+          <Link href="#">
+            <a>Contact</a>
+          </Link>
           <hr />
-          <a href="#">Services</a>
+          <Link href="#">
+            <a>Studio</a>
+          </Link>
         </div>
       </header>
-      <Canvas camera={{position: [0, 5, 5], fov: 75}}>
+      <Canvas camera={{position: [0, 3, 2], fov: 75}}>
         <ambientLight />
-        <mesh>
-          <boxGeometry />
-          <meshBasicMaterial />
-        </mesh>
+        <Suspense fallback={null}>
+          <AllStar />
+        </Suspense>
       </Canvas>
     </Container>
   )
