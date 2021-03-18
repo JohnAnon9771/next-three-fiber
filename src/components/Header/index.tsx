@@ -1,7 +1,6 @@
 import Link from 'next/link'
 
 import {version} from '../../../package.json'
-
 import * as S from './styles'
 
 interface Props {
@@ -17,13 +16,13 @@ export default function Header({color}: Props): JSX.Element {
         </h3>
         <p>JohnAnon9771</p>
         <S.Links>
-          <Link href="/first-example">
+          <Link href="/boxes">
             <a>First Example</a>
           </Link>
-          <Link href="/second-example">
+          <Link href="/cosmos">
             <a>Second Example</a>
           </Link>
-          <Link href="/thirty-example">
+          <Link href="/sneakers">
             <a>Thirty Example</a>
           </Link>
         </S.Links>
