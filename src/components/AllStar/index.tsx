@@ -59,7 +59,7 @@ export default function Model(
   const {nodes, materials} = useGLTF('/all_star/scene.gltf') as GLTFResult
 
   return (
-    <group ref={group} rotation={[0.3, 1.3, 0]} {...props} dispose={null}>
+    <group ref={group} rotation={[0.5, 2.4, 0]} {...props} dispose={null}>
       <group rotation={[-Math.PI / 2, 0, 0]}>
         <group rotation={[Math.PI / 2, 0, 0]}>
           <mesh
