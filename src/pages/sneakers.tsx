@@ -7,10 +7,11 @@ export default function ThirtyExample(): JSX.Element {
   return (
     <Container>
       <header className="header">
-        <nav className="flex flex-jc-sb flex-ai-c">
+        <nav className="header__nav">
           <a href="/" className="header__logo">
             <img src="/public/logo.svg" alt="Logo" />
           </a>
+
           <Link href="#">
             <a className="header__menu hide-for-desktop">
               <span id="one"></span>
