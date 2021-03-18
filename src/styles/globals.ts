@@ -28,13 +28,13 @@ export default createGlobalStyle`
 
 
   .hide-for-mobile {
-    @media (min-width: 649px) {
+    @media screen and (max-width: 649px) {
       display: none;
     }
   }
 
   .hide-for-desktop {
-    @media (min-width: 649px)  {
+    @media screen and (min-width: 649px)  {
       display: none;
     }
   }
