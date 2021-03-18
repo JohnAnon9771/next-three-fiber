@@ -4,6 +4,7 @@ import Link from 'next/link'
 import {Suspense} from 'react'
 import {Canvas} from 'react-three-fiber'
 
+import {OrbitControls} from '@react-three/drei'
 import {Container} from 'styles/pages/sneakers'
 
 const AllStar = dynamic(
@@ -53,9 +54,11 @@ export default function ThirtyExample(): JSX.Element {
       </header>
       <Canvas camera={{position: [0, 3, 2], fov: 75}}>
         <ambientLight />
+        <directionalLight position={[0, 0, 5]} />
         <Suspense fallback={null}>
           <AllStar />
         </Suspense>
+        <OrbitControls enableZoom={false} />
       </Canvas>
     </Container>
   )
