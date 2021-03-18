@@ -24,21 +24,21 @@ export default createGlobalStyle`
     --light-gray: #5A5856;
     --white: #F4F3F3;
     --light-brown: #943003;
-    --light-gray: #AO9F9E; 
+    --light-gray: #AO9F9E;
 
 
   .hide-for-mobile {
     @media (min-width: 649px) {
-      display: none !important;
+      display: none;
     }
   }
 
   .hide-for-desktop {
     @media (min-width: 649px)  {
-      display: none !important;
+      display: none;
     }
   }
-  
+
   }
 
   a {
