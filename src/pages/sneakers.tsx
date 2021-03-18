@@ -5,16 +5,16 @@ import {Suspense} from 'react'
 import {Canvas} from 'react-three-fiber'
 
 import {OrbitControls} from '@react-three/drei'
-import {Container} from 'styles/pages/sneakers'
+import * as S from 'styles/pages/sneakers'
 
 const AllStar = dynamic(
   () => import('components').then(component => component.AllStar),
   {ssr: false}
 )
 
-export default function ThirtyExample(): JSX.Element {
+export default function Sneakers(): JSX.Element {
   return (
-    <Container>
+    <S.Container>
       <header className="header">
         <nav className="header__nav">
           <a href="/" className="header__logo">
@@ -52,14 +52,16 @@ export default function ThirtyExample(): JSX.Element {
           </Link>
         </div>
       </header>
-      <Canvas camera={{position: [0, 3, 2], fov: 75}}>
-        <ambientLight />
-        <directionalLight position={[0, 0, 5]} />
-        <Suspense fallback={null}>
-          <AllStar />
-        </Suspense>
-        <OrbitControls enableZoom={false} />
-      </Canvas>
-    </Container>
+      <S.Main>
+        <Canvas className="canvas" camera={{position: [0, 0.5, 2], fov: 75}}>
+          <ambientLight />
+          <directionalLight position={[0, 0, 5]} />
+          <Suspense fallback={null}>
+            <AllStar />
+          </Suspense>
+          <OrbitControls enableZoom={false} />
+        </Canvas>
+      </S.Main>
+    </S.Container>
   )
 }
