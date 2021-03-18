@@ -104,7 +104,7 @@ module.exports = withTM({
     return [
       {
         source: '/',
-        destination: '/first-example',
+        destination: '/boxes',
         permanent: true,
       },
     ]
