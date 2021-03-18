@@ -1,3 +1,4 @@
 {
-  "extends": "eslint-config-johnanon/next"
+  "extends": "eslint-config-johnanon/next",
+  "rules": {"jsx-a11y/anchor-is-valid": 0}
 }
