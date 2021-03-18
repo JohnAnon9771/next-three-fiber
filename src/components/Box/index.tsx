@@ -1,7 +1,7 @@
 import {useRef, useState} from 'react'
+import {useSpring, a} from 'react-spring/three.cjs'
 import {useFrame, MeshProps, BoxGeometryProps} from 'react-three-fiber'
 
-import {useSpring, a} from 'react-spring/three.cjs'
 import {MeshWobbleMaterial} from '@react-three/drei'
 import {Mesh, Vector3} from 'three'
 
