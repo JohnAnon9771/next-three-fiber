@@ -11,26 +11,64 @@ export const Container = styled.div`
     display: flex;
     align-items: center;
 
+    color: var(--white);
+
     z-index: 1;
 
-    background-color: var(--white);
     height: 100px;
     width: 100%;
 
     &__nav {
       display: flex;
       flex-direction: row;
-      justify-content: space-around;
+      justify-content: space-between;
       align-items: center;
+
+      width: 100%;
+
+      margin: 0 40px;
+    }
+
+    &__links {
+      display: flex;
+      justify-content: space-around;
+
+      width: 30%;
+      height: 100%;
+
+      font-weight: bold;
+      font-size: 26px;
+
+      .special-link {
+        margin-right: 100px;
+      }
     }
   }
 `
 
 export const Main = styled.main`
-  height: 100vh;
-  width: 100vw;
+  .slideshow {
+    height: 100vh;
+    width: 100vw;
 
-  .canvas {
-    z-index: 0;
+    .scroll-content {
+      height: 100%;
+      width: 100%;
+    }
+
+    &__list {
+      height: 100%;
+      width: 100%;
+    }
+
+    &__item {
+      height: 100%;
+      width: 100%;
+
+      .canvas {
+        height: 100%;
+        z-index: 0;
+      }
+    }
   }
 `

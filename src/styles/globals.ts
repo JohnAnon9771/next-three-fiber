@@ -22,10 +22,9 @@ export default createGlobalStyle`
     --bg-primary: #020101;
     --brown: #5F1E04;
     --light-gray: #5A5856;
+    --light-gray-secundary: #A09F9E;
     --white: #F4F3F3;
     --light-brown: #943003;
-    --light-gray: #AO9F9E;
-
 
   .hide-for-mobile {
     @media screen and (max-width: 649px) {
