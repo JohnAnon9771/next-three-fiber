@@ -39,7 +39,7 @@
 
 ## :dart: About
 
-The purpose of this repository is for studies and practices with React three fiber applying to next.js :smile:
+The purpose of this repository is for studies and practices with React three fiber applying to next.j:smile:
 
 ## :rocket: Technologies
 
@@ -53,7 +53,7 @@ The following tools were used in this project:
 
 ## :white_check_mark: Requirements
 
-Before starting :checkered_flag:, you need to have [Git](https://git-scm.com) and [Node](https://nodejs.org/en/) installed.
+Before starting :checkered_flag:, you need to have [Git](https://git-scm.com), [Node](https://nodejs.org/en/) and [Yarn](https://yarnpkg.com/getting-started/install) installed.
 
 ## :checkered_flag: Starting
 
