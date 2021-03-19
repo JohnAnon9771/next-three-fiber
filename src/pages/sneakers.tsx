@@ -17,9 +17,11 @@ export default function Sneakers(): JSX.Element {
     <S.Container>
       <header className="header">
         <nav className="header__nav">
-          <a href="/" className="header__logo">
-            <img src="/public/logo.svg" alt="Logo" />
-          </a>
+          <Link href="/sneakers">
+            <a className="header__logo">
+              <h3>Logo</h3>
+            </a>
+          </Link>
 
           <Link href="#">
             <a className="header__menu hide-for-desktop">
@@ -30,11 +32,15 @@ export default function Sneakers(): JSX.Element {
           </Link>
 
           <div className="header__links hide-for-mobile">
-            <a href="#">Work</a>
-            <span></span>
-            <a href="#about-us">Contact</a>
-            <span></span>
-            <a href="#services">Studio</a>
+            <Link href="#">
+              <a className="special-link">Work</a>
+            </Link>
+            <Link href="#">
+              <a>Contact</a>
+            </Link>
+            <Link href="#">
+              <a>Studio</a>
+            </Link>
           </div>
         </nav>
 
@@ -53,14 +59,25 @@ export default function Sneakers(): JSX.Element {
         </div>
       </header>
       <S.Main>
-        <Canvas className="canvas" camera={{position: [0, 0.5, 2], fov: 75}}>
-          <ambientLight />
-          <directionalLight position={[0, 0, 5]} />
-          <Suspense fallback={null}>
-            <AllStar />
-          </Suspense>
-          <OrbitControls enableZoom={false} />
-        </Canvas>
+        <section className="slideshow">
+          <div className="scroll-content">
+            <ul className="slideshow__list">
+              <li className="slideshow__item">
+                <Canvas
+                  className="canvas"
+                  camera={{position: [0, 0, 2], fov: 75}}
+                >
+                  <ambientLight />
+                  <directionalLight position={[7, 0, 5]} intensity={0.4} />
+                  <Suspense fallback={null}>
+                    <AllStar />
+                  </Suspense>
+                  <OrbitControls enableZoom={false} />
+                </Canvas>
+              </li>
+            </ul>
+          </div>
+        </section>
       </S.Main>
     </S.Container>
   )
