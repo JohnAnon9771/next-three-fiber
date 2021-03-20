@@ -25,6 +25,7 @@ export const Container = styled.div`
       align-items: center;
 
       width: 100%;
+      height: 100%;
 
       margin: 0 40px;
     }
@@ -32,12 +33,37 @@ export const Container = styled.div`
     &__links {
       display: flex;
       justify-content: space-around;
+      /* background-color: blue; */
 
-      width: 30%;
-      height: 100%;
+      width: 400px;
 
-      font-weight: bold;
+      font-weight: 400;
       font-size: 26px;
+
+      a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+
+        span {
+          position: absolute;
+          opacity: 0;
+          top: 40px;
+          left: 0;
+          bottom: 0;
+          right: 0;
+
+          border-bottom: 3px solid var(--white);
+        }
+        &:hover {
+          span {
+            transition: opacity 200ms ease-in;
+
+            opacity: 1;
+          }
+        }
+      }
 
       .special-link {
         margin-right: 100px;

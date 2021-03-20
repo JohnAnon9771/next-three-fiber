@@ -33,13 +33,22 @@ export default function Sneakers(): JSX.Element {
 
           <div className="header__links hide-for-mobile">
             <Link href="#">
-              <a className="special-link">Work</a>
+              <a className="special-link">
+                work
+                <span />
+              </a>
             </Link>
             <Link href="#">
-              <a>Contact</a>
+              <a>
+                contact
+                <span />
+              </a>
             </Link>
             <Link href="#">
-              <a>Studio</a>
+              <a>
+                studio
+                <span />
+              </a>
             </Link>
           </div>
         </nav>
