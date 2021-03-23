@@ -39,7 +39,7 @@
 
 ## :dart: About
 
-The purpose of this repository is for studies and practices with React three fiber applying to next.j:smile:
+The purpose of this repository is for studies and practices with React three fiber applying to Next.js :smile:
 
 ## :rocket: Technologies
 
