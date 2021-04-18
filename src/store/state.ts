@@ -1,4 +1,4 @@
-import { createRef, RefObject } from "react"
+import {createRef, RefObject} from 'react'
 
 export interface State {
   sections: number
@@ -11,7 +11,7 @@ const state: State = {
   sections: 3,
   pages: 3,
   zoom: 75,
-  top: createRef()
+  top: createRef(),
 }
 
 export default state
